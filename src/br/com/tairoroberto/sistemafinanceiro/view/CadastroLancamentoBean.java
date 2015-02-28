@@ -1,13 +1,18 @@
 package br.com.tairoroberto.sistemafinanceiro.view;
 
 import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
+import br.com.tairoroberto.sistemafinanceiro.model.Pessoa;
 import br.com.tairoroberto.sistemafinanceiro.model.TipoLancamento;
+import br.com.tairoroberto.sistemafinanceiro.service.GestaoPessoas;
 
+import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by tairo on 27/02/15.
@@ -16,11 +21,18 @@ import java.io.Serializable;
 @ViewScoped
 public class CadastroLancamentoBean implements Serializable {
 
+    private List<Pessoa> pessoas = new ArrayList<Pessoa>();
     private Lancamento lancamento = new Lancamento();
+
+    @PostConstruct
+    public void init(){
+        GestaoPessoas gestaoPessoas = new GestaoPessoas();
+        this.pessoas = gestaoPessoas.listarTodas();
+    }
 
     public void cadastrar() {
         System.out.println("Tipo: " + this.lancamento.getTipo());
-        //System.out.println("Pessoa: " + this.lancamento.getPessoa());
+        System.out.println("Pessoa: " + this.lancamento.getPessoa().getNome());
         System.out.println("Descrição: " + this.lancamento.getDescricao());
         System.out.println("Valor: " + this.lancamento.getValor());
         System.out.println("Data de vencimento: " + this.lancamento.getDataVencimento());
@@ -42,5 +54,9 @@ public class CadastroLancamentoBean implements Serializable {
 
     public TipoLancamento[] getTiposLancamentos() {
         return TipoLancamento.values();
+    }
+
+    public List<Pessoa> getPessoas() {
+        return pessoas;
     }
 }
