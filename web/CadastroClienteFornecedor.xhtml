@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Cadastro Cliente/Fornecedor</title>
+
+<h:outputStylesheet library="css" name="sistema.css"/>
+<h:outputStylesheet library="css" name="consulta-lancamentos.css"/>
+
+</h:head>
+<h:body>
+	<h1>Cadastro de Cliente/Fornecedor</h1>
+	
+	<h:form>
+		<h:commandButton value="Nova"/>
+		<h:commandButton value="Consulta"/>
+		
+		<h:panelGrid columns="2" styleClass="form-grid"
+			columnClasses="label,campo">
+			
+			<h:outputLabel value="Nome"/>
+			<h:inputText size="40" label="Nome"/>
+			
+			<h:outputLabel value="Tipo"/>
+			<h:selectOneRadio>
+				<f:selectItem itemLabel="Física"/>
+				<f:selectItem itemLabel="Jurídica"/>
+			</h:selectOneRadio>
+			
+			<h:outputLabel value="E-mail" />
+			<h:inputText size="40" label="E-mail"/>
+			
+			<h:outputLabel value="Data de nascimento"/>
+			<h:inputText size="12" label="Data de nascimento"/>
+			
+			<h:outputLabel value="Ramo de atividade"/>
+			<h:selectOneMenu>
+				<f:selectItem itemLabel="Consultoria"/>
+				<f:selectItem itemLabel="Educação"/>
+			</h:selectOneMenu>
+			
+			<h:outputLabel/>
+			<h:commandButton value="Cadastrar"/>
+		</h:panelGrid>
+	</h:form>
+</h:body>
+</html>

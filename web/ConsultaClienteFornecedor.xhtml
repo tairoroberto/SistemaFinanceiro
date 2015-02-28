@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Consulta Cliente/Fornecedor</title>
+
+<h:outputStylesheet library="css" name="sistema.css"/>
+<h:outputStylesheet library="css" name="consulta-lancamentos.css"/>
+
+</h:head>
+<h:body>
+	<h1>Consulta de Cliente/Fornecedor</h1>
+	
+	<h:form id="frm">
+		<h:commandButton value="Novo Cliente/Fornecedor"/>	
+		
+		<h:dataTable var="clienteFornecedor" value="#{consultaClienteFornecedorBean.clienteFornecedor}"
+			width="100%" styleClass="grid" headerClass="cabecalho" rowClasses="cor-sim,cor-nao"
+			columnClasses="cliente-fornecedor,cliente-fornecedor-tipo,cliente-fornecedor-ramo,cliente-fornecedor-acoes">
+			
+			<h:column>
+				<f:facet name="header">Nome</f:facet>
+				<h:outputText value="Universidade Nove de Julho"/>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Tipo</f:facet>
+				<h:outputText value="Jurídica"/>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">Ramo</f:facet>
+				<h:outputText value="Educação"/>
+			</h:column>
+			
+			<h:column>
+				<h:graphicImage value="/images/editar.png"/>
+				<h:graphicImage value="/images/excluir.png"/>
+			</h:column>
+		</h:dataTable>
+		
+	</h:form>
+</h:body>
+</html>
