@@ -10,6 +10,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.event.ValueChangeEvent;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,13 @@ public class CadastroLancamentoBean implements Serializable {
     public void init(){
         GestaoPessoas gestaoPessoas = new GestaoPessoas();
         this.pessoas = gestaoPessoas.listarTodas();
+    }
+
+    public void lancamentoPagoModificado(ValueChangeEvent event){
+        this.lancamento.setPago((Boolean)event.getNewValue());
+        this.lancamento.setDataPagamento(null);
+        //pula todasa as validações e rederiza tela
+        FacesContext.getCurrentInstance().renderResponse();
     }
 
     public void cadastrar() {

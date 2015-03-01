@@ -61,18 +61,23 @@
                     required="true" >
                 <f:convertDateTime pattern="dd/MM/yyyy"/>
             </h:inputText>
-			
+
 			<h:outputLabel/>
 			<h:panelGroup>
-				<h:selectBooleanCheckbox value="#{cadastroLancamentoBean.lancamento.pago}" id="conatPaga"/>
+				<h:selectBooleanCheckbox value="#{cadastroLancamentoBean.lancamento.pago}" id="conatPaga"
+                        immediate="true" valueChangeListener="#{cadastroLancamentoBean.lancamentoPagoModificado}"
+                        onchange="submit()"/>
 				<h:outputLabel for="conatPaga" value="Conta paga" />
 			</h:panelGroup>
 			
-			<h:outputLabel value="Data pagamento"/>
+			<h:outputLabel value="Data pagamento" rendered="#{cadastroLancamentoBean.lancamento.pago}"/>
 			<h:inputText size="12" label="Data pagamento"
-                    value="#{cadastroLancamentoBean.lancamento.dataPagamento}">
+                    value="#{cadastroLancamentoBean.lancamento.dataPagamento}"
+                    rendered="#{cadastroLancamentoBean.lancamento.pago}">
                 <f:convertDateTime pattern="dd/MM/yyyy"/>
                 <f:validator validatorId="br.com.tairoroberto.DataFutura"/>
+                <f:validator validatorId="br.com.tairoroberto.RequeridoCondicional"/>
+                <f:attribute name="checked" value="#{cadastroLancamentoBean.lancamento.pago}"/>
             </h:inputText>
 			
 			<h:outputLabel/>
