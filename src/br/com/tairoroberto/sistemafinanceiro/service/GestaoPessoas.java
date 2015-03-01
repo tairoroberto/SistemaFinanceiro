@@ -12,9 +12,9 @@ public class GestaoPessoas implements Serializable {
 	private static  HashMap<Integer, Pessoa> pessoas = new HashMap<Integer,Pessoa>();
 	
 	static {
-		pessoas.put(1, new Pessoa(1,"João da Silva"));
-		pessoas.put(2, new Pessoa(2,"Lava-jato Água e Sabão Ltda"));
-		pessoas.put(3, new Pessoa(3,"Sebastião Mnedes de Souza"));
+		pessoas.put(1, new Pessoa(1,"João da Silva",null,null,null,null));
+		pessoas.put(2, new Pessoa(2,"Lava-jato Água e Sabão Ltda",null,null,null,null));
+		pessoas.put(3, new Pessoa(3,"Sebastião Mnedes de Souza",null,null,null,null));
 	}
 	
 	public List<Pessoa> listarTodas() {

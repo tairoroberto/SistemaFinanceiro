@@ -35,9 +35,9 @@
                         itemValue="#{tipoLancamento}"/>
 			</h:selectOneRadio>
 			
-			<h:outputLabel value="Cliente/Fornecedor"/>
+			<h:outputLabel value="Pessoa"/>
 			<h:selectOneMenu value="#{cadastroLancamentoBean.lancamento.pessoa}"
-                    required="true" label="Cliente/Fornecedor">
+                    required="true" label="Pessoa">
                 <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
 				<f:selectItems value="#{cadastroLancamentoBean.pessoas}"
                         var="pessoa" itemValue="#{pessoa}" itemLabel="#{pessoa.nome}"/>
