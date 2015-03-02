@@ -1,28 +1,32 @@
 package br.com.tairoroberto.sistemafinanceiro.model;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
+@Entity
+@Table(name = "pessoa")
 public class Pessoa implements Serializable {
 	private Integer codigo;
 	private String nome;
     private TipoPessoa tipo;
     private String email;
-    private RamoAtividade ramoAtividade;
     private Date dataNascimento;
+    private RamoAtividade ramoAtividade;
 
     public Pessoa() {
     }
 
-    public Pessoa(Integer codigo, String nome, TipoPessoa tipo, String email, RamoAtividade ramoAtividade, Date dataNascimento) {
+    public Pessoa(Integer codigo, String nome, String email, Date dataNascimento, RamoAtividade ramoAtividade) {
         this.codigo = codigo;
         this.nome = nome;
-        this.tipo = tipo;
         this.email = email;
-        this.ramoAtividade = ramoAtividade;
         this.dataNascimento = dataNascimento;
+        this.ramoAtividade = ramoAtividade;
     }
 
+    @Id //id in database
+    @GeneratedValue //auto_increment fild in table
     public Integer getCodigo() {
         return codigo;
     }
@@ -31,6 +35,7 @@ public class Pessoa implements Serializable {
         this.codigo = codigo;
     }
 
+    @Column(name = "nome")
     public String getNome() {
         return nome;
     }
@@ -39,6 +44,8 @@ public class Pessoa implements Serializable {
         this.nome = nome;
     }
 
+    @Enumerated(EnumType.STRING)
+    @Column(name = "tipo")
     public TipoPessoa getTipo() {
         return tipo;
     }
@@ -47,6 +54,7 @@ public class Pessoa implements Serializable {
         this.tipo = tipo;
     }
 
+    @Column(name = "email")
     public String getEmail() {
         return email;
     }
@@ -55,6 +63,17 @@ public class Pessoa implements Serializable {
         this.email = email;
     }
 
+    @Column(name = "data_nascimento")
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date data_nascimento) {
+        this.dataNascimento = data_nascimento;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "codigo_ramo_atividade")
     public RamoAtividade getRamoAtividade() {
         return ramoAtividade;
     }
@@ -63,11 +82,33 @@ public class Pessoa implements Serializable {
         this.ramoAtividade = ramoAtividade;
     }
 
-    public Date getDataNascimento() {
-        return dataNascimento;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Pessoa pessoa = (Pessoa) o;
+
+        if (codigo != null ? !codigo.equals(pessoa.codigo) : pessoa.codigo != null) return false;
+        if (dataNascimento != null ? !dataNascimento.equals(pessoa.dataNascimento) : pessoa.dataNascimento != null)
+            return false;
+        if (email != null ? !email.equals(pessoa.email) : pessoa.email != null) return false;
+        if (nome != null ? !nome.equals(pessoa.nome) : pessoa.nome != null) return false;
+        if (ramoAtividade != null ? !ramoAtividade.equals(pessoa.ramoAtividade) : pessoa.ramoAtividade != null)
+            return false;
+        if (tipo != pessoa.tipo) return false;
+
+        return true;
     }
 
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    @Override
+    public int hashCode() {
+        int result = codigo != null ? codigo.hashCode() : 0;
+        result = 31 * result + (nome != null ? nome.hashCode() : 0);
+        result = 31 * result + (tipo != null ? tipo.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (dataNascimento != null ? dataNascimento.hashCode() : 0);
+        result = 31 * result + (ramoAtividade != null ? ramoAtividade.hashCode() : 0);
+        return result;
     }
 }

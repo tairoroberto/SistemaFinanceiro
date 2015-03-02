@@ -1,5 +1,10 @@
 package br.com.tairoroberto.sistemafinanceiro.view;
 
+import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
+import br.com.tairoroberto.sistemafinanceiro.util.HibernateUtil;
+import org.hibernate.Session;
+import org.hibernate.criterion.Order;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -11,16 +16,20 @@ import javax.faces.bean.ViewScoped;
 @ManagedBean
 @ViewScoped
 public class ConsultaLancamentoBean implements Serializable {
-	private List<String> lancamentos = new ArrayList<String>();
+	private List<Lancamento> lancamentos = new ArrayList<Lancamento>();
 
 	@PostConstruct
 	public void inicializar(){
-		for (int i = 0; i < 20; i++) {
-			lancamentos.add("");
-		}
+        Session session = HibernateUtil.getSession();
+
+        this.lancamentos = session.createCriteria(Lancamento.class)
+                .addOrder(Order.desc("dataVencimento"))
+                .list();
+
+        session.close();
 	}
 	
-	public List<String> getLancamentos() {
+	public List<Lancamento> getLancamentos() {
 		return lancamentos;
 	}	
 }

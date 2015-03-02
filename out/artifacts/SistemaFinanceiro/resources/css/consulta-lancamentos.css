@@ -8,26 +8,27 @@ td.pessoa {
 }
 
 td.descricao {
+    text-align: left;
 }
 
 td.valor { 
 	width: 100px;
-	text-align: center;
+	text-align: left;
 }
 
 td.vencimento { 
 	width: 100px;
-	text-align: center;
+	text-align: left;
 }
 
 td.pagamento { 
 	width: 100px;
-	text-align: center;
+	text-align: left;
 }
 
 td.situacao { 
 	width: 80px;
-	text-align: center;
+	text-align: left;
 }
 
 td.acoes { 

@@ -1,7 +1,9 @@
 package br.com.tairoroberto.sistemafinanceiro.converter;
 
 import br.com.tairoroberto.sistemafinanceiro.model.Pessoa;
-import br.com.tairoroberto.sistemafinanceiro.service.GestaoPessoas;
+import br.com.tairoroberto.sistemafinanceiro.util.HibernateUtil;
+import org.hibernate.Session;
+import org.hibernate.criterion.Order;
 
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -11,7 +13,7 @@ import javax.faces.convert.FacesConverter;
 /**
  * Created by tairo on 28/02/15.
  */
-@FacesConverter(forClass = Pessoa.class)
+@FacesConverter("br.com.tairoroberto.PessoaConverter")//forClass = Pessoa.class
 public class PessoaConverter implements Converter {
 
     @Override
@@ -19,8 +21,12 @@ public class PessoaConverter implements Converter {
         Pessoa pessoa = null;
 
         if (value != null){
-            GestaoPessoas gestaoPessoas = new GestaoPessoas();
-            pessoa = gestaoPessoas.buscarPorCodico(new Integer(value));
+
+            Session session = HibernateUtil.getSession();
+
+            pessoa = (Pessoa) session.get(Pessoa.class, new Integer(value));
+
+            session.close();
         }
         return pessoa;
     }

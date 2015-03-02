@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - CursoJSF@localhost" uuid="d2b2ea84-41a6-4945-b7da-d6abc86ef455">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>CursoJSF.*</schema-pattern>
+      <default-schemas>CursoJSF.*</default-schemas>
+    </data-source>
+  </component>
+</project>

@@ -9,8 +9,11 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Mojarra-2.2.1" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.34-bin" />
+          <element id="library" level="project" name="Hibernate" />
         </element>
       </element>
+      <element id="javaee-facet-resources" facet="SistemaFinanceiro/web/Web2" />
     </root>
   </artifact>
 </component>

@@ -3,7 +3,10 @@ package br.com.tairoroberto.sistemafinanceiro.view;
 import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
 import br.com.tairoroberto.sistemafinanceiro.model.Pessoa;
 import br.com.tairoroberto.sistemafinanceiro.model.TipoLancamento;
-import br.com.tairoroberto.sistemafinanceiro.service.GestaoPessoas;
+import br.com.tairoroberto.sistemafinanceiro.util.HibernateUtil;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+import org.hibernate.criterion.Order;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
@@ -13,6 +16,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.event.ValueChangeEvent;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -27,25 +31,30 @@ public class CadastroLancamentoBean implements Serializable {
 
     @PostConstruct
     public void init(){
-        GestaoPessoas gestaoPessoas = new GestaoPessoas();
-        this.pessoas = gestaoPessoas.listarTodas();
+        Session session = HibernateUtil.getSession();
+
+        this.pessoas = session.createCriteria(Pessoa.class)
+                .addOrder(Order.asc("nome"))
+                .list();
+
+        session.close();
     }
 
     public void lancamentoPagoModificado(ValueChangeEvent event){
         this.lancamento.setPago((Boolean)event.getNewValue());
         this.lancamento.setDataPagamento(null);
-        //pula todasa as validações e rederiza tela
+        //pula todas as validações e rederiza tela
         FacesContext.getCurrentInstance().renderResponse();
     }
 
     public void cadastrar() {
-        System.out.println("Tipo: " + this.lancamento.getTipo());
-        System.out.println("Pessoa: " + this.lancamento.getPessoa().getNome());
-        System.out.println("Descrição: " + this.lancamento.getDescricao());
-        System.out.println("Valor: " + this.lancamento.getValor());
-        System.out.println("Data de vencimento: " + this.lancamento.getDataVencimento());
-        System.out.println("Conta paga: " + this.lancamento.isPago());
-        System.out.println("Data de pagamento: " + this.lancamento.getDataPagamento());
+        Session session = HibernateUtil.getSession();
+        Transaction transaction = session.beginTransaction();
+
+        session.merge(this.lancamento);
+
+        transaction.commit();
+        session.close();
 
         this.lancamento = new Lancamento();
 

@@ -18,8 +18,8 @@
 	
 	<h:form id="frm">
 		
-		<h:button value="Novo" outcome="CadastroLancamento"/>
-		<h:button value="Consulta" outcome="ConsultaLancamento"/>
+		<h:button value="Novo pessoa" outcome="CadastroPessoa"/>
+		<h:button value="Consulta lancamentos" outcome="ConsultaLancamento"/>
 
         <h:messages showDetail="false" showSummary="true" styleClass="form-messages"
                 errorClass="error" infoClass="info"/>
@@ -41,6 +41,7 @@
                 <f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
 				<f:selectItems value="#{cadastroLancamentoBean.pessoas}"
                         var="pessoa" itemValue="#{pessoa}" itemLabel="#{pessoa.nome}"/>
+                <f:converter converterId="br.com.tairoroberto.PessoaConverter"/>
 			</h:selectOneMenu>
 			
 			<h:outputLabel value="Descrição"/>

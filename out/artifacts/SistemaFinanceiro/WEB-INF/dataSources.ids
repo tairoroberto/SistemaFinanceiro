@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - CursoJSF@localhost" uuid="d2b2ea84-41a6-4945-b7da-d6abc86ef455">
+    <database-info product="MySQL" version="5.5.41-0ubuntu0.14.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.34 ( Revision: jess.balint@oracle.com-20141014163213-wqbwpf1ok2kvo1om )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="CursoJSF"/>
+    <table name="lancamento" schema="" catalog="CursoJSF" type="TABLE">
+      <column name="codigo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="tipo" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <column name="codigo_pessoa" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="descricao" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <column name="valor" sqlType="DECIMAL" precision="10" scale="2" nullable="false" jdbcType="3"/>
+      <column name="data_vencimento" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="pago" sqlType="BIT" precision="1" scale="0" nullable="false" jdbcType="-7"/>
+      <column name="data_pagamento" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <primary-key name="PRIMARY" columns="codigo"/>
+      <foreign-key name="lancamento_ibfk_1" columns="codigo_pessoa" ref-table="pessoa" ref-schema="" ref-catalog="CursoJSF" ref-columns="codigo" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="pessoa" schema="" catalog="CursoJSF" type="TABLE">
+      <column name="codigo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nome" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="tipo" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="data_nascimento" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
+      <column name="codigo_ramo_atividade" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="codigo"/>
+      <foreign-key name="pessoa_ibfk_1" columns="codigo_ramo_atividade" ref-table="ramo_atividade" ref-schema="" ref-catalog="CursoJSF" ref-columns="codigo" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="lancamento_ibfk_1" table="lancamento" schema="" catalog="CursoJSF" columns="codigo_pessoa"/>
+    </table>
+    <table name="ramo_atividade" schema="" catalog="CursoJSF" type="TABLE">
+      <column name="codigo" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="descricao" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="codigo"/>
+      <exported-key name="pessoa_ibfk_1" table="pessoa" schema="" catalog="CursoJSF" columns="codigo_ramo_atividade"/>
+    </table>
+  </data-source>
+</component>

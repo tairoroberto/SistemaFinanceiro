@@ -2,6 +2,8 @@ package br.com.tairoroberto.sistemafinanceiro.converter;
 
 import br.com.tairoroberto.sistemafinanceiro.model.RamoAtividade;
 import br.com.tairoroberto.sistemafinanceiro.service.GestaoRamosAtividades;
+import br.com.tairoroberto.sistemafinanceiro.util.HibernateUtil;
+import org.hibernate.Session;
 
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -18,8 +20,11 @@ public class RamoAtividadeConverter implements Converter{
         RamoAtividade ramoAtividade = null;
 
         if (value != null){
-            GestaoRamosAtividades gestaoRamosAtividades = new GestaoRamosAtividades();
-            ramoAtividade = gestaoRamosAtividades.buscarPorCodico(new Integer(value));
+            Session session = HibernateUtil.getSession();
+
+            ramoAtividade = (RamoAtividade) session.get(RamoAtividade.class, new Integer(value));
+
+            session.close();
         }
         return ramoAtividade;
     }
