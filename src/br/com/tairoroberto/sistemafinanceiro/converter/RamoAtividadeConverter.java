@@ -1,9 +1,8 @@
 package br.com.tairoroberto.sistemafinanceiro.converter;
 
 import br.com.tairoroberto.sistemafinanceiro.model.RamoAtividade;
-import br.com.tairoroberto.sistemafinanceiro.service.GestaoRamosAtividades;
-import br.com.tairoroberto.sistemafinanceiro.util.HibernateUtil;
-import org.hibernate.Session;
+import br.com.tairoroberto.sistemafinanceiro.repository.RamosAtividades;
+import br.com.tairoroberto.sistemafinanceiro.util.Repositorios;
 
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -15,16 +14,15 @@ import javax.faces.convert.FacesConverter;
  */
 @FacesConverter(forClass = RamoAtividade.class)
 public class RamoAtividadeConverter implements Converter{
+
+    private Repositorios repositorios = new Repositorios();
     @Override
     public Object getAsObject(FacesContext facesContext, UIComponent uiComponent, String value) {
         RamoAtividade ramoAtividade = null;
 
         if (value != null){
-            Session session = HibernateUtil.getSession();
-
-            ramoAtividade = (RamoAtividade) session.get(RamoAtividade.class, new Integer(value));
-
-            session.close();
+            RamosAtividades ramosAtividades = this.repositorios.getRamosAtividates();
+            ramoAtividade = ramosAtividades.porCodigo(new Integer(value));
         }
         return ramoAtividade;
     }

@@ -24,8 +24,8 @@
       <column name="nome" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="tipo" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
       <column name="email" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
-      <column name="data_nascimento" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="codigo_ramo_atividade" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="data_nascimento" sqlType="DATE" precision="10" scale="0" nullable="true" jdbcType="91"/>
+      <column name="codigo_ramo_atividade" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="codigo"/>
       <foreign-key name="pessoa_ibfk_1" columns="codigo_ramo_atividade" ref-table="ramo_atividade" ref-schema="" ref-catalog="CursoJSF" ref-columns="codigo" update-rule="3" delete-rule="3" deferrability="2"/>
       <exported-key name="lancamento_ibfk_1" table="lancamento" schema="" catalog="CursoJSF" columns="codigo_pessoa"/>

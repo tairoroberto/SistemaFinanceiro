@@ -1,37 +1,30 @@
 package br.com.tairoroberto.sistemafinanceiro.view;
 
 import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
+import br.com.tairoroberto.sistemafinanceiro.repository.Lancamentos;
 import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
-import br.com.tairoroberto.sistemafinanceiro.util.HibernateUtil;
-import org.hibernate.Session;
-import org.hibernate.Transaction;
-import org.hibernate.criterion.Order;
-
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+import br.com.tairoroberto.sistemafinanceiro.util.Repositorios;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-import javax.faces.context.FacesContext;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @ManagedBean
 @ViewScoped
 public class ConsultaLancamentoBean implements Serializable {
+
+    private Repositorios repositorios = new Repositorios();
 	private List<Lancamento> lancamentos = new ArrayList<Lancamento>();
     private  Lancamento lancamentoSelecionado;
 
 	@PostConstruct
 	public void inicializar(){
-        Session session = HibernateUtil.getSession();
-
-        this.lancamentos = session.createCriteria(Lancamento.class)
-                .addOrder(Order.desc("dataVencimento"))
-                .list();
-
-        session.close();
+        Lancamentos lancamentos = this.repositorios.getLacamentos();
+        this.lancamentos = lancamentos.todos();
 	}
 
     public void excluir(){
@@ -39,11 +32,8 @@ public class ConsultaLancamentoBean implements Serializable {
             FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_ERROR,
                     "Lançamento já foi pago e não pode ser excluído!");
         }else{
-            Session session = HibernateUtil.getSession();
-            Transaction transaction = session.beginTransaction();
-            session.delete(lancamentoSelecionado);
-            transaction.commit();
-            session.close();
+            Lancamentos lacamentos = this.repositorios.getLacamentos();
+            lacamentos.deletar(this.lancamentoSelecionado);
 
             this.inicializar();
             FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_INFO,"Lançamento excluido com sucesso!");

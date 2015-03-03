@@ -1,6 +1,7 @@
 package br.com.tairoroberto.sistemafinanceiro.view;
 
 import br.com.tairoroberto.sistemafinanceiro.model.Pessoa;
+import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
 import br.com.tairoroberto.sistemafinanceiro.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
@@ -19,13 +20,12 @@ public class ConsultaPessoaBean {
 	
 	@PostConstruct
 	public void inicializar() {
-        Session session = HibernateUtil.getSession();
+        Session session = (Session) FacesUtil.getRequestAttribute("session");
 
         this.pessoas = session.createCriteria(Pessoa.class)
                 .addOrder(Order.asc("nome"))
                 .list();
 
-        session.close();
 	}
 
     public List<Pessoa> getPessoas() {

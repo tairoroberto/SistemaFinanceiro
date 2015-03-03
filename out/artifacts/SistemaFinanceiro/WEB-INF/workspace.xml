@@ -2,10 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1295aaee-fd4e-41d5-b01e-8d2af9304234" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/ConsultaLancamento.xhtml" afterPath="$PROJECT_DIR$/web/ConsultaLancamento.xhtml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/HibernateSessionFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.class" afterPath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.class" afterPath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/view/ConsultaLancamentoBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/view/ConsultaLancamentoBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/view/ConsultaLancamentoBean.class" afterPath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/view/ConsultaLancamentoBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/view/ConsultaPessoaBean.class" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/view/ConsultaPessoaBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/view/ConsultaPessoaBean.class" afterPath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/view/ConsultaPessoaBean.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.class" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.class" afterPath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/model/Lancamento.class" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/model/Lancamento.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/model/Lancamento.class" afterPath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/model/Lancamento.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/converter/PessoaConverter.class" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/converter/PessoaConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/converter/PessoaConverter.class" afterPath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/converter/PessoaConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/converter/RamoAtividadeConverter.class" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/classes/br/com/tairoroberto/sistemafinanceiro/converter/RamoAtividadeConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/converter/RamoAtividadeConverter.class" afterPath="$PROJECT_DIR$/out/production/SistemaFinanceiro/br/com/tairoroberto/sistemafinanceiro/converter/RamoAtividadeConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/dataSources.ids" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.java" afterPath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.java" afterPath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaLancamentoBean.java" afterPath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaLancamentoBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaPessoaBean.java" afterPath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaPessoaBean.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.java" afterPath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/PessoaConverter.java" afterPath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/PessoaConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/RamoAtividadeConverter.java" afterPath="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/RamoAtividadeConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/SistemaFinanceiro_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/SistemaFinanceiro_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/artifacts/SistemaFinanceiro_war_exploded.xml" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/artifacts/SistemaFinanceiro_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/dataSources.xml" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/workspace.xml" afterPath="$PROJECT_DIR$/out/artifacts/SistemaFinanceiro/WEB-INF/workspace.xml" />
     </list>
     <ignored path="SistemaFinanceiro.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,46 +76,6 @@
         <option name="myItemId" value="CursoJSF" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="ramo_atividade" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - CursoJSF@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="CursoJSF" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="pessoa" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - CursoJSF@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="CursoJSF" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="lancamento" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -96,47 +84,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ConsultaLancamento.xhtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConsultaLancamento.xhtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/ConsultaLancamento.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43944636" vertical-offset="52" max-vertical-offset="1584">
-              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="1584">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CadastroLancamento.xhtml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CadastroLancamento.xhtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/CadastroLancamento.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.3333335" vertical-offset="216" max-vertical-offset="1710">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.28496042" vertical-offset="216" max-vertical-offset="1710">
+              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsultaLancamentoBean.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaLancamentoBean.java">
+      <file leaf-file-name="HibernateSessionFilter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/HibernateSessionFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="990">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="1098">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
-                <element signature="e#765#777#0" expanded="true" />
-                <element signature="e#1742#1743#0" expanded="true" />
-                <element signature="e#1767#1768#0" expanded="true" />
-                <element signature="e#1819#1820#0" expanded="true" />
-                <element signature="e#1863#1864#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FacesUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.java">
+      <file leaf-file-name="CadastroLancamentoBean.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1314">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -172,21 +156,22 @@
         <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
         <option value="db-console:/a4f657a0/8b55a18b-5dac-4375-b982-418f125f109c/" />
         <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/service/GestaoPessoas.java" />
-        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/RamoAtividadeConverter.java" />
         <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/model/Pessoa.java" />
         <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/model/RamoAtividade.java" />
-        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.java" />
-        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.java" />
-        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaPessoaBean.java" />
-        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/PessoaConverter.java" />
         <option value="$PROJECT_DIR$/web/resources/css/consulta-lancamentos.css" />
         <option value="$PROJECT_DIR$/web/resources/css/sistema.css" />
         <option value="$PROJECT_DIR$/web/ConsultaPessoa.xhtml" />
         <option value="$PROJECT_DIR$/web/CadastroLancamento.xhtml" />
         <option value="$PROJECT_DIR$/web/CadastroPessoa.xhtml" />
+        <option value="$PROJECT_DIR$/web/ConsultaLancamento.xhtml" />
+        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/HibernateSessionFilter.java" />
         <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.java" />
         <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaLancamentoBean.java" />
-        <option value="$PROJECT_DIR$/web/ConsultaLancamento.xhtml" />
+        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaPessoaBean.java" />
+        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.java" />
+        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.java" />
+        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/PessoaConverter.java" />
+        <option value="$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/RamoAtividadeConverter.java" />
       </list>
     </option>
   </component>
@@ -207,9 +192,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1366" />
-    <option name="height" value="744" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -236,6 +221,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -250,7 +236,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,6 +269,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SistemaFinanceiro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SistemaFinanceiro_Hibernate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,6 +341,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sistemafinanceiro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="validator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,6 +409,24 @@
               <option name="myItemId" value="sistemafinanceiro" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SistemaFinanceiro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SistemaFinanceiro_Hibernate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sistemafinanceiro" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -443,7 +468,7 @@
     <property name="recentsLimit" value="5" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
@@ -473,11 +498,11 @@
     <configuration default="false" name="TesteHibernate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="TesteHibernate" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -826,8 +851,8 @@
       </method>
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.0.59" />
-      <item index="1" class="java.lang.String" itemvalue="Application.TesteHibernate" />
+      <item index="0" class="java.lang.String" itemvalue="Application.TesteHibernate" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7.0.59" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -858,12 +883,14 @@
       <workItem from="1425256002227" duration="725000" />
       <workItem from="1425256745696" duration="1524000" />
       <workItem from="1425258644445" duration="6937000" />
-      <workItem from="1425340441318" duration="1430000" />
+      <workItem from="1425340441318" duration="5772000" />
+      <workItem from="1425346287015" duration="53000" />
+      <workItem from="1425346408977" duration="286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60473000" />
+    <option name="totallyTimeSpent" value="65154000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -886,30 +913,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1366" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5007576" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33977455" sideWeight="0.4996016" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33950618" sideWeight="0.4996016" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16439395" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23333333" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24924242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="JSF" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31635803" sideWeight="0.49961567" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35493827" sideWeight="0.49924242" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.60030866" sideWeight="0.49924242" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3271605" sideWeight="0.4996016" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18636364" sideWeight="0.49845678" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24940239" sideWeight="0.50110865" order="2" side_tool="true" content_ui="tabs" />
@@ -957,28 +984,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="188" max-vertical-offset="1134">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/service/GestaoRamosAtividades.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="522">
-          <caret line="17" column="67" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/CadastroPessoa.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1278">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/CadastroLancamento.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1692">
@@ -1206,13 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/RamoAtividadeConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="88" max-vertical-offset="666">
-          <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/validator/DataFuturaValidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4982699" vertical-offset="0" max-vertical-offset="578">
@@ -1231,7 +1229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5294118" vertical-offset="0" max-vertical-offset="578">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,50 +1256,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/model/Lancamento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19669421" vertical-offset="1123" max-vertical-offset="1728">
-          <caret line="104" column="51" selection-start-line="104" selection-start-column="51" selection-end-line="104" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaPessoaBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/PessoaConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="147" max-vertical-offset="864">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2757732" vertical-offset="433" max-vertical-offset="1422">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5515464" vertical-offset="272" max-vertical-offset="1116">
-          <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/CadastroPessoa.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24913494" vertical-offset="162" max-vertical-offset="1278">
           <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1310,7 +1267,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4152249" vertical-offset="84" max-vertical-offset="972">
           <caret line="18" column="69" selection-start-line="18" selection-start-column="69" selection-end-line="18" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1318,7 +1274,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17475729" vertical-offset="540" max-vertical-offset="1440">
           <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1326,46 +1281,108 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
           <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.624" vertical-offset="162" max-vertical-offset="918">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaPessoaBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="98" max-vertical-offset="486">
+          <caret line="22" column="65" selection-start-line="22" selection-start-column="65" selection-end-line="22" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/RamoAtividadeConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6185567" vertical-offset="12" max-vertical-offset="630">
+          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/converter/PessoaConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10824742" vertical-offset="390" max-vertical-offset="846">
+          <caret line="24" column="69" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroPessoaBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.742268" vertical-offset="0" max-vertical-offset="1008">
+          <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/ConsultaLancamentoBean.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="990">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.904" vertical-offset="111" max-vertical-offset="864">
+          <caret line="40" column="69" selection-start-line="40" selection-start-column="69" selection-end-line="40" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/FacesUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48" vertical-offset="108" max-vertical-offset="540">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ConsultaLancamento.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="1584">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/javax.faces-2.2.1.jar!/com/sun/faces/vendor/WebContainerInjectionProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.565445" vertical-offset="432" max-vertical-offset="648">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/util/HibernateSessionFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="554" max-vertical-offset="1098">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="e#765#777#0" expanded="true" />
-            <element signature="e#1742#1743#0" expanded="true" />
-            <element signature="e#1767#1768#0" expanded="true" />
-            <element signature="e#1819#1820#0" expanded="true" />
-            <element signature="e#1863#1864#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/model/Lancamento.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.27" vertical-offset="216" max-vertical-offset="1728">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/com/tairoroberto/sistemafinanceiro/view/CadastroLancamentoBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="572" max-vertical-offset="1314">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/CadastroLancamento.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3333335" vertical-offset="216" max-vertical-offset="1710">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="24" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ConsultaLancamento.xhtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43944636" vertical-offset="52" max-vertical-offset="1584">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.28496042" vertical-offset="216" max-vertical-offset="1710">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -1424,7 +1441,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Hibernate|SistemaFinanceiro</last-edited>
+          <last-edited>Web2|SistemaFinanceiro</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1436,7 +1453,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>mysql-connector-java-5.1.34-bin</last-edited>
+          <last-edited>org.hibernate:hibernate-core:4.3.8.Final</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

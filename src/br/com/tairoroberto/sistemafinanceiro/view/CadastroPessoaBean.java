@@ -1,13 +1,13 @@
 package br.com.tairoroberto.sistemafinanceiro.view;
 
-import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
 import br.com.tairoroberto.sistemafinanceiro.model.Pessoa;
 import br.com.tairoroberto.sistemafinanceiro.model.RamoAtividade;
 import br.com.tairoroberto.sistemafinanceiro.model.TipoPessoa;
-import br.com.tairoroberto.sistemafinanceiro.service.GestaoRamosAtividades;
-import br.com.tairoroberto.sistemafinanceiro.util.HibernateUtil;
+import br.com.tairoroberto.sistemafinanceiro.repository.Pessoas;
+import br.com.tairoroberto.sistemafinanceiro.repository.RamosAtividades;
+import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
+import br.com.tairoroberto.sistemafinanceiro.util.Repositorios;
 import org.hibernate.Session;
-import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
 
 import javax.annotation.PostConstruct;
@@ -25,19 +25,17 @@ import java.util.List;
 @ManagedBean
 @ViewScoped
 public class CadastroPessoaBean {
+    private Repositorios repositorios = new Repositorios();
     private Pessoa pessoa = new Pessoa();
     private List<RamoAtividade> ramosAtividadeses = new ArrayList<RamoAtividade>();
 
 
     @PostConstruct
     public void init(){
-        Session session = HibernateUtil.getSession();
+        RamosAtividades ramosAtividades = this.repositorios.getRamosAtividates();
 
-        this.ramosAtividadeses = session.createCriteria(RamoAtividade.class)
-                .addOrder(Order.asc("descricao"))
-                .list();
+        this.ramosAtividadeses = ramosAtividades.todas();
 
-        session.close();
     }
 
     public void verificaTipo(ValueChangeEvent event){
@@ -49,16 +47,10 @@ public class CadastroPessoaBean {
     }
 
     public void cadastrar() {
-        Session session = HibernateUtil.getSession();
-        Transaction transaction = session.beginTransaction();
-
-        session.merge(this.pessoa);
-
-        transaction.commit();
-        session.close();
+        Pessoas pessoas = this.repositorios.getPessoas();
+        pessoas.cadastrar(this.pessoa);
 
         this.pessoa = new Pessoa();
-
         String msg = "Cadastro efetuado com sucesso!";
 
         FacesContext.getCurrentInstance().addMessage(null,
