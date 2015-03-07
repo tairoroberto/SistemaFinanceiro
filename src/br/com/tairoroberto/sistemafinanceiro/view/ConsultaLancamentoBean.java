@@ -2,6 +2,8 @@ package br.com.tairoroberto.sistemafinanceiro.view;
 
 import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
 import br.com.tairoroberto.sistemafinanceiro.repository.Lancamentos;
+import br.com.tairoroberto.sistemafinanceiro.service.GestaoLancamentos;
+import br.com.tairoroberto.sistemafinanceiro.service.RegraNegocioException;
 import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
 import br.com.tairoroberto.sistemafinanceiro.util.Repositorios;
 
@@ -28,15 +30,16 @@ public class ConsultaLancamentoBean implements Serializable {
 	}
 
     public void excluir(){
-        if (this.lancamentoSelecionado.isPago()){
-            FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_ERROR,
-                    "Lançamento já foi pago e não pode ser excluído!");
-        }else{
-            Lancamentos lacamentos = this.repositorios.getLacamentos();
-            lacamentos.deletar(this.lancamentoSelecionado);
+        //chama a classe que contem as regras de negócio
+        GestaoLancamentos gestaoLancamentos = new GestaoLancamentos(this.repositorios.getLacamentos());
 
+        try {
+            gestaoLancamentos.excluir(this.lancamentoSelecionado);
             this.inicializar();
             FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_INFO,"Lançamento excluido com sucesso!");
+
+        } catch (RegraNegocioException e) {
+            FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_INFO, e.getMessage());
         }
     }
 

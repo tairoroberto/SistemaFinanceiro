@@ -4,6 +4,7 @@ import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
 import br.com.tairoroberto.sistemafinanceiro.repository.Lancamentos;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
 
 import java.util.List;
 
@@ -44,6 +45,17 @@ public class LancamentosHibernate implements Lancamentos {
     @Override
     public void editar(Lancamento lancamento) {
 
+    }
+
+    @Override
+    public Lancamento comDadosIguais(Lancamento lancamento) {
+        return (Lancamento)this.session.createCriteria(Lancamento.class)
+                .add(Restrictions.eq("tipo", lancamento.getTipo()))
+                .add(Restrictions.eq("pessoa", lancamento.getPessoa()))
+                .add(Restrictions.ilike("descricao", lancamento.getDescricao()))
+                .add(Restrictions.eq("valor", lancamento.getValor()))
+                .add(Restrictions.eq("dataVencimento",lancamento.getDataVencimento()))
+                .uniqueResult();
     }
 
 }

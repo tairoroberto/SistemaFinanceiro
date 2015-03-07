@@ -1,6 +1,8 @@
 package br.com.tairoroberto.sistemafinanceiro.view;
 
 import br.com.tairoroberto.sistemafinanceiro.repository.Lancamentos;
+import br.com.tairoroberto.sistemafinanceiro.service.GestaoLancamentos;
+import br.com.tairoroberto.sistemafinanceiro.service.RegraNegocioException;
 import br.com.tairoroberto.sistemafinanceiro.util.Repositorios;
 import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
 import br.com.tairoroberto.sistemafinanceiro.model.Pessoa;
@@ -45,14 +47,17 @@ public class CadastroLancamentoBean implements Serializable {
     }
 
     public void cadastrar() {
-        Lancamentos lancamentos = this.repositorios.getLacamentos();
-        lancamentos.cadastrar(this.lancamento);
+        //classe que contem as regras de negocio
+        GestaoLancamentos gestaoLancamentos = new GestaoLancamentos(this.repositorios.getLacamentos());
 
-        this.lancamento = new Lancamento();
-        String msg = "Cadastro efetuado com sucesso!";
+        try {
+            gestaoLancamentos.salvar(lancamento);
 
-        FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage(FacesMessage.SEVERITY_INFO,msg,msg));
+            this.lancamento = new Lancamento();
+            FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_INFO,"Cadastro efetuado com sucesso!");
+        } catch (RegraNegocioException e) {
+            FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_ERROR,e.getMessage());
+        }
     }
 
 

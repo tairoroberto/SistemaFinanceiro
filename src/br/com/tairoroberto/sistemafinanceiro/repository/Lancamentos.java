@@ -14,4 +14,5 @@ public interface Lancamentos {
     public void cadastrar(Lancamento lancamento);
     public void deletar(Lancamento lancamento);
     public void editar(Lancamento lancamento);
+    public Lancamento comDadosIguais(Lancamento lancamento);
 }
