@@ -38,7 +38,7 @@ public class PessoasHibernate implements Pessoas {
 
     @Override
     public void deletar(Pessoa pessoa) {
-
+        session.delete(pessoa);
     }
 
     @Override

@@ -17,6 +17,9 @@
 	
 	<h:form id="frm">
 		<h:commandButton value="Nova Pessoa" action="CadastroPessoa" />
+
+        <h:messages showDetail="false" showSummary="true" styleClass="form-messages"
+                    errorClass="error" infoClass="info"/>
 		
 		<h:dataTable var="pessoa" value="#{consultaPessoaBean.pessoas}"
 			width="100%" styleClass="grid" headerClass="cabecalho" rowClasses="cor-sim,cor-nao"
@@ -36,12 +39,18 @@
 				<f:facet name="header">Ramo</f:facet>
 				<h:outputText value="#{pessoa.ramoAtividade.descricao}" style="padding-left: 30px;"/>
 			</h:column>
-			
-			<h:column>
+
+            <h:column>
                 <f:facet name="header">Ação</f:facet>
-				<h:graphicImage value="/imagens/editar.png" style="padding-left: 30px;"/>
-				<h:graphicImage value="/imagens/excluir.png"/>
-			</h:column>
+                <h:graphicImage value="/imagens/editar.png"/>
+
+                <h:commandLink action="#{consultaPessoaBean.deletar}">
+                    <h:graphicImage value="/imagens/excluir.png"/>
+                    <f:setPropertyActionListener value="#{pessoa}"
+                                                 target="#{consultaPessoaBean.pessoaSelecionada}" />
+                </h:commandLink>
+            </h:column>
+
 		</h:dataTable>
 		
 	</h:form>

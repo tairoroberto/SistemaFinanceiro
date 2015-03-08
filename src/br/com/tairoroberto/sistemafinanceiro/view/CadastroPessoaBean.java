@@ -5,6 +5,7 @@ import br.com.tairoroberto.sistemafinanceiro.model.RamoAtividade;
 import br.com.tairoroberto.sistemafinanceiro.model.TipoPessoa;
 import br.com.tairoroberto.sistemafinanceiro.repository.Pessoas;
 import br.com.tairoroberto.sistemafinanceiro.repository.RamosAtividades;
+import br.com.tairoroberto.sistemafinanceiro.service.GestaoPessoas;
 import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
 import br.com.tairoroberto.sistemafinanceiro.util.Repositorios;
 import org.hibernate.Session;
@@ -47,14 +48,11 @@ public class CadastroPessoaBean {
     }
 
     public void cadastrar() {
-        Pessoas pessoas = this.repositorios.getPessoas();
-        pessoas.cadastrar(this.pessoa);
+        GestaoPessoas gestaoPessoas = new GestaoPessoas(this.repositorios.getPessoas());
+        gestaoPessoas.salvar(this.pessoa);
 
+        FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_INFO,"Cadastro efetuado com sucesso!");
         this.pessoa = new Pessoa();
-        String msg = "Cadastro efetuado com sucesso!";
-
-        FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage(FacesMessage.SEVERITY_INFO,msg,msg));
     }
 
     public TipoPessoa[] getTiposPessoas(){

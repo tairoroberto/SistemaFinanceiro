@@ -1,15 +1,13 @@
 package br.com.tairoroberto.sistemafinanceiro.view;
 
-import br.com.tairoroberto.sistemafinanceiro.repository.Lancamentos;
-import br.com.tairoroberto.sistemafinanceiro.service.GestaoLancamentos;
-import br.com.tairoroberto.sistemafinanceiro.service.RegraNegocioException;
-import br.com.tairoroberto.sistemafinanceiro.util.Repositorios;
 import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
 import br.com.tairoroberto.sistemafinanceiro.model.Pessoa;
 import br.com.tairoroberto.sistemafinanceiro.model.TipoLancamento;
 import br.com.tairoroberto.sistemafinanceiro.repository.Pessoas;
+import br.com.tairoroberto.sistemafinanceiro.service.GestaoLancamentos;
+import br.com.tairoroberto.sistemafinanceiro.service.RegraNegocioException;
 import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
-import org.hibernate.Session;
+import br.com.tairoroberto.sistemafinanceiro.util.Repositorios;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
