@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "pessoa")
-public class Pessoa implements Serializable {
+public class Pessoa implements Serializable, Cloneable {
 	private Integer codigo;
 	private String nome;
     private TipoPessoa tipo;
@@ -110,5 +110,10 @@ public class Pessoa implements Serializable {
         result = 31 * result + (dataNascimento != null ? dataNascimento.hashCode() : 0);
         result = 31 * result + (ramoAtividade != null ? ramoAtividade.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

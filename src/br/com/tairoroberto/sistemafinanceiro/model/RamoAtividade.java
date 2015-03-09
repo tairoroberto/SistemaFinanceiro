@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "ramo_atividade")
-public class RamoAtividade implements Serializable {
+public class RamoAtividade implements Serializable, Cloneable {
     private Integer codigo;
     private String descricao;
 
@@ -59,5 +59,10 @@ public class RamoAtividade implements Serializable {
         int result = codigo != null ? codigo.hashCode() : 0;
         result = 31 * result + (descricao != null ? descricao.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

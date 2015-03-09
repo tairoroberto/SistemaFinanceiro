@@ -55,12 +55,27 @@ public class CadastroPessoaBean {
         this.pessoa = new Pessoa();
     }
 
+    public boolean isEditando(){
+        return this.pessoa.getCodigo() != null;
+    }
+
     public TipoPessoa[] getTiposPessoas(){
         return TipoPessoa.values();
     }
 
     public Pessoa getPessoa() {
         return pessoa;
+    }
+
+    //para não retornar nullo devemos instanciar uma nova pessoa senão irá gerar uma NullPointerException
+    public void setPessoa(Pessoa pessoa) throws CloneNotSupportedException {
+        this.pessoa = pessoa;
+        if (this.pessoa == null){
+            this.pessoa = new Pessoa();
+        }else{
+            //retorna um clone para evitar erro no hibernate
+            this.pessoa = (Pessoa) pessoa.clone();
+        }
     }
 
     public List<RamoAtividade> getRamosAtividadeses() {

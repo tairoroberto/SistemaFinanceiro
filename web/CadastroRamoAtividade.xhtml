@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<f:metadata>
+    <f:viewParam name="codigo" value="#{cadastroPessoaBean.pessoa}"/>
+</f:metadata>
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>#{cadastroRamoAtividadeBean.editando ? 'Editar Atividade': 'Nova Atividade'}</title>
+
+    <h:outputStylesheet library="css" name="sistema.css"/>
+    <h:outputStylesheet library="css" name="consulta-lancamentos.css"/>
+
+</h:head>
+<h:body>
+    <h1>#{cadastroRamoAtividadeBean.editando ? 'Editar Atividade': 'Nova Atividade'}</h1>
+
+    <h:form>
+        <h:button value="Novo lancamento" outcome="CadastroLancamento"/>
+        <h:button value="Consulta Atividades" outcome="ConsultaRamoAtividade"/>
+
+        <h:messages showDetail="false" showSummary="true" styleClass="form-messages"
+                    errorClass="error" infoClass="info"/>
+
+        <h:panelGrid columns="2" styleClass="form-grid"
+                     columnClasses="label,campo">
+
+            <h:outputLabel value="Nome"/>
+            <h:inputText size="40" label="Nome" value="#{cadastroRamoAtividadeBean.ramoAtividade.descricao}"
+                         required="true"/>
+
+            <h:outputLabel/>
+            <h:commandButton value="Cadastrar" action="#{cadastroRamoAtividadeBean.salvar}"/>
+        </h:panelGrid>
+    </h:form>
+</h:body>
+</html>

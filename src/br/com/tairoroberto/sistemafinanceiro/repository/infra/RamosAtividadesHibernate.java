@@ -28,17 +28,17 @@ public class RamosAtividadesHibernate implements RamosAtividades {
 
     @Override
     public RamoAtividade porCodigo(Integer codigo) {
-        return (RamoAtividade) session.get(RamosAtividades.class, codigo);
+        return (RamoAtividade) session.get(RamoAtividade.class, codigo);
     }
 
     @Override
     public void cadastrar(RamoAtividade ramoAtividade) {
-
+        session.merge(ramoAtividade);
     }
 
     @Override
     public void deletar(RamoAtividade ramoAtividade) {
-
+        session.delete(ramoAtividade);
     }
 
     @Override

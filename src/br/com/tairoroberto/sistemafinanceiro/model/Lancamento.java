@@ -7,7 +7,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "lancamento")
-public class Lancamento implements Serializable {
+public class Lancamento implements Serializable, Cloneable{
 	
 	private Integer codigo;
 	private TipoLancamento tipo;
@@ -121,5 +121,10 @@ public class Lancamento implements Serializable {
         result = 31 * result + (pago ? 1 : 0);
         result = 31 * result + (dataPagamento != null ? dataPagamento.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
