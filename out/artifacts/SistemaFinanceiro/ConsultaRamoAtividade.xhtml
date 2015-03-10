@@ -1,51 +1,48 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
-<h:head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Ramos e atividades</title>
+<ui:composition template="/template/LayoutPadrao.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core">
 
-<h:outputStylesheet library="css" name="sistema.css"/>
-<h:outputStylesheet library="css" name="consulta-lancamentos.css"/>
+    <ui:define name="title">
+        <title>Ramos e atividades</title>
+    </ui:define>
 
-</h:head>
-<h:body>
-	<h1>Ramos e atividades</h1>
-	
-	<h:form id="frm">
-		<h:commandButton value="Nova Atividade" action="CadastroRamoAtividade" />
+    <ui:define name="conteudo">
+        <h1>Ramos e atividades</h1>
 
-        <h:messages showDetail="false" showSummary="true" styleClass="form-messages"
-                    errorClass="error" infoClass="info"/>
-		
-		<h:dataTable var="ramoAtividade" value="#{consultaRamoAtividadeBean.ramoAtividades}"
-			width="100%" styleClass="grid" headerClass="cabecalho" rowClasses="cor-sim,cor-nao"
-			columnClasses="cliente-fornecedor,cliente-fornecedor-acoes">
-			
-			<h:column>
-				<f:facet name="header">Nome</f:facet>
-				<h:outputText value="#{ramoAtividade.descricao}" style="padding-left: 30px;"/>
-			</h:column>
+        <h:form id="frm">
+            <h:commandButton value="Nova Atividade" action="CadastroRamoAtividade" />
 
-            <h:column>
-                <f:facet name="header">Ação</f:facet>
-                <h:link outcome="CadastroRamoAtividade">
-                    <h:graphicImage value="/imagens/editar.png"/>
-                    <f:param name="codigo" value="#{ramoAtividade.codigo}"/>
-                </h:link>
+            <h:messages showDetail="false" showSummary="true" styleClass="form-messages"
+                        errorClass="error" infoClass="info"/>
+
+            <h:dataTable var="ramoAtividade" value="#{consultaRamoAtividadeBean.ramoAtividades}"
+                         width="100%" styleClass="grid" headerClass="cabecalho" rowClasses="cor-sim,cor-nao"
+                         columnClasses="cliente-fornecedor,cliente-fornecedor-acoes">
+
+                <h:column>
+                    <f:facet name="header">#{msg.name_activity}</f:facet>
+                    <h:outputText value="#{ramoAtividade.descricao}" style="padding-left: 30px;"/>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">#{msg.action}</f:facet>
+                    <h:link outcome="CadastroRamoAtividade">
+                        <h:graphicImage value="/imagens/editar.png"/>
+                        <f:param name="codigo" value="#{ramoAtividade.codigo}"/>
+                    </h:link>
 
 
-                <h:commandLink action="#{consultaRamoAtividadeBean.deletar}">
-                    <h:graphicImage value="/imagens/excluir.png"/>
-                    <f:setPropertyActionListener value="#{ramoAtividade}"
-                                                 target="#{consultaRamoAtividadeBean.ramoAtividadeSelecionada}" />
-                </h:commandLink>
-            </h:column>
+                    <h:commandLink action="#{consultaRamoAtividadeBean.deletar}">
+                        <h:graphicImage value="/imagens/excluir.png"/>
+                        <f:setPropertyActionListener value="#{ramoAtividade}"
+                                                     target="#{consultaRamoAtividadeBean.ramoAtividadeSelecionada}" />
+                    </h:commandLink>
+                </h:column>
 
-		</h:dataTable>
-		
-	</h:form>
-</h:body>
-</html>
+            </h:dataTable>
+
+        </h:form>
+    </ui:define>
+</ui:composition>

@@ -2,6 +2,7 @@ package br.com.tairoroberto.sistemafinanceiro.converter;
 
 import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
 import br.com.tairoroberto.sistemafinanceiro.repository.Lancamentos;
+import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
 import br.com.tairoroberto.sistemafinanceiro.util.Repositorios;
 
 import javax.faces.application.FacesMessage;
@@ -27,7 +28,7 @@ public class LancamentoConverter implements Converter {
             lancamento = lancamentos.porCodigo(new Integer(value));
 
             if (lancamento == null){
-                String descricaoErro = "Lançamento não existe!";
+                String descricaoErro = FacesUtil.getMessageI18n("entry_does_not_exist");
                 FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,descricaoErro,descricaoErro);
                 throw new ConverterException(message);
             }

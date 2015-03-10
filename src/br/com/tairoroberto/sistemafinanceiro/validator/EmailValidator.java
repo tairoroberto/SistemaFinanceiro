@@ -1,5 +1,6 @@
 package br.com.tairoroberto.sistemafinanceiro.validator;
 
+import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
 import com.sun.faces.util.MessageFactory;
 
 import javax.faces.application.FacesMessage;
@@ -32,7 +33,7 @@ public class EmailValidator implements Validator {
 
             Object label = MessageFactory.getLabel(facesContext,uiComponent);
              if (!matcher.matches()){
-                 String descricaoErro = value + " não é um e-mail válido.";
+                 String descricaoErro = value + FacesUtil.getMessageI18n("email_is_invalid");
                  FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,descricaoErro,descricaoErro);
                  throw new ValidatorException(message);
              }

@@ -1,5 +1,6 @@
 package br.com.tairoroberto.sistemafinanceiro.validator;
 
+import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
 import com.sun.faces.util.MessageFactory;
 
 import javax.faces.application.FacesMessage;
@@ -22,7 +23,7 @@ public class DataFuturaValidator implements Validator{
 
         if (data != null && data.after(new Date())){
             Object label = MessageFactory.getLabel(facesContext,uiComponent);
-            String descricaoErro = label + " não pode ser uma data futura.";
+            String descricaoErro = label + FacesUtil.getMessageI18n("cannot_be_a_future_date");
             FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,descricaoErro,descricaoErro);
             throw new ValidatorException(message);
         }

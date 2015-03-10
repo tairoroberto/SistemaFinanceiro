@@ -1,69 +1,75 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
-<f:metadata>
-    <f:viewParam name="codigo" value="#{cadastroPessoaBean.pessoa}"/>
-</f:metadata>
-<h:head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>#{cadastroPessoaBean.editando ? 'Editar pessoa': 'Nova pessoa'}</title>
+<ui:composition template="/template/LayoutPadrao.xhtml"
+                xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core">
 
-<h:outputStylesheet library="css" name="sistema.css"/>
-<h:outputStylesheet library="css" name="consulta-lancamentos.css"/>
+    <ui:define name="title">
+        <title>#{cadastroPessoaBean.editando ? 'Editar pessoa': 'Nova pessoa'}</title>
+    </ui:define>
 
-</h:head>
-<h:body>
-	<h1>#{cadastroPessoaBean.editando ? 'Editar pessoa': 'Nova pessoa'}</h1>
-	
-	<h:form>
-		<h:button value="Novo lancamento" outcome="CadastroLancamento"/>
-        <h:button value="Nova Atividade" outcome="CadastroRamoAtividade" />
-		<h:button value="Consulta pessoas" outcome="ConsultaPessoa"/>
+    <ui:define name="head">
+        <f:metadata>
+            <f:viewParam name="codigo" value="#{cadastroPessoaBean.pessoa}"/>
+        </f:metadata>
+    </ui:define>
 
-        <h:messages showDetail="false" showSummary="true" styleClass="form-messages"
-                    errorClass="error" infoClass="info"/>
-		
-		<h:panelGrid columns="2" styleClass="form-grid"
-			columnClasses="label,campo">
-			
-			<h:outputLabel value="Nome"/>
-			<h:inputText size="40" label="Nome" value="#{cadastroPessoaBean.pessoa.nome}"
-                    required="true"/>
-			
-			<h:outputLabel value="Tipo"/>
-			<h:selectOneRadio value="#{cadastroPessoaBean.pessoa.tipo}"
-                              label="Tipo" required="true" immediate="true"
-                              valueChangeListener="#{cadastroPessoaBean.verificaTipo}"
-                              onchange="submit()">
-				<f:selectItems value="#{cadastroPessoaBean.tiposPessoas}"
-                        var="tipoPessoa" itemValue="#{tipoPessoa}" itemLabel="#{tipoPessoa.descricaoTipo}"/>
-			</h:selectOneRadio>
+    <ui:define name="conteudo">
 
-			<h:outputLabel value="E-mail" />
-			<h:inputText size="40" label="E-mail" value="#{cadastroPessoaBean.pessoa.email}"
-                    required="true">
-                <f:validator validatorId="br.com.tairoroberto.EmailValidator"/>
-            </h:inputText>
-			
-			<h:outputLabel value="Data de nascimento" rendered="#{cadastroPessoaBean.pessoa.tipo eq 'FISICA'}"/>
-			<h:inputText size="12" label="Data de nascimento"
-                         value="#{cadastroPessoaBean.pessoa.dataNascimento}"
-                         rendered="#{cadastroPessoaBean.pessoa.tipo eq 'FISICA'}">
-                <f:convertDateTime pattern="dd/MM/yyyy"/>
-            </h:inputText>
-			
-			<h:outputLabel value="Ramo de atividade" rendered="#{cadastroPessoaBean.pessoa.tipo eq 'JURIDICA'}"/>
-			<h:selectOneMenu value="#{cadastroPessoaBean.pessoa.ramoAtividade}"
-                    required="true" rendered="#{cadastroPessoaBean.pessoa.tipo eq 'JURIDICA'}">
-				<f:selectItems value="#{cadastroPessoaBean.ramosAtividadeses}"
-                        var="ramoAtividade" itemLabel="#{ramoAtividade.descricao}"/>
-			</h:selectOneMenu>
-			
-			<h:outputLabel/>
-			<h:commandButton value="Cadastrar" action="#{cadastroPessoaBean.cadastrar}"/>
-		</h:panelGrid>
-	</h:form>
-</h:body>
-</html>
+        <h1>#{cadastroPessoaBean.editando ? 'Editar pessoa': 'Nova pessoa'}</h1>
+
+        <h:form id="frm">
+            <h:button value="#{msg.new_entry}" outcome="CadastroLancamento"/>
+            <h:button value="#{msg.new_activity}" outcome="CadastroRamoAtividade" />
+            <h:button value="#{msg.search_person}" outcome="ConsultaPessoa"/>
+
+            <h:messages showDetail="false" showSummary="true" styleClass="form-messages"
+                        errorClass="error" infoClass="info"/>
+
+            <h:panelGrid columns="2" styleClass="form-grid"
+                         columnClasses="label,campo" id="panel">
+
+                <h:outputLabel value="#{msg.name_person}"/>
+                <h:inputText size="40" label="#{msg.name_person}" value="#{cadastroPessoaBean.pessoa.nome}"
+                             required="true"/>
+
+                <h:outputLabel value="#{msg.type}"/>
+                <h:selectOneRadio value="#{cadastroPessoaBean.pessoa.tipo}"
+                                  label="#{msg.type}" required="true" immediate="true"
+                                  valueChangeListener="#{cadastroPessoaBean.verificaTipo}"
+                                  onchange="jsf.ajax.request(this, event, {execute: '@form', render: 'frm:panel'})">
+                    <f:selectItems value="#{cadastroPessoaBean.tiposPessoas}"
+                                   var="tipoPessoa" itemValue="#{tipoPessoa}" itemLabel="#{msg[tipoPessoa.descricaoTipo]}"/>
+                </h:selectOneRadio>
+
+                <h:outputLabel value="#{msg.email}" />
+                <h:inputText size="40" label="#{msg.email}" value="#{cadastroPessoaBean.pessoa.email}"
+                             required="true">
+                    <f:validator validatorId="br.com.tairoroberto.EmailValidator"/>
+                </h:inputText>
+
+                <h:outputLabel value="#{msg.born_date}" rendered="#{cadastroPessoaBean.pessoa.tipo eq 'FISICA'}"/>
+                <h:inputText size="12" label="#{msg.born_date}"
+                             value="#{cadastroPessoaBean.pessoa.dataNascimento}"
+                             rendered="#{cadastroPessoaBean.pessoa.tipo eq 'FISICA'}">
+                    <f:convertDateTime pattern="dd/MM/yyyy"/>
+                </h:inputText>
+
+                <h:outputLabel value="#{msg.activity}" rendered="#{cadastroPessoaBean.pessoa.tipo eq 'JURIDICA'}"/>
+                <h:selectOneMenu value="#{cadastroPessoaBean.pessoa.ramoAtividade}"
+                                 required="true" rendered="#{cadastroPessoaBean.pessoa.tipo eq 'JURIDICA'}"
+                                 label="#{msg.activity}">
+                    <f:selectItem itemLabel="#{msg.select}" noSelectionOption="true"/>
+                    <f:selectItems value="#{cadastroPessoaBean.ramosAtividadeses}"
+                                   var="ramoAtividade" itemLabel="#{ramoAtividade.descricao}"/>
+                </h:selectOneMenu>
+
+                <h:outputLabel/>
+                <h:commandButton value="#{msg.save}" action="#{cadastroPessoaBean.cadastrar}">
+                    <f:ajax execute="@form" render="@all"/>
+                </h:commandButton>
+            </h:panelGrid>
+        </h:form>
+
+    </ui:define>
+</ui:composition>

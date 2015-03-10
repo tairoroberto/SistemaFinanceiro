@@ -1,5 +1,6 @@
 package br.com.tairoroberto.sistemafinanceiro.validator;
 
+import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
 import com.sun.faces.util.MessageFactory;
 
 import javax.faces.application.FacesMessage;
@@ -25,7 +26,7 @@ public class RequeridoCondicionalValidator implements Validator{
 
         if (checked != null && checked && value == null){
             Object label = MessageFactory.getLabel(facesContext,uiComponent);
-            String descricaoErro = "Preencha o campo " + label + ".";
+            String descricaoErro = FacesUtil.getMessageI18n("fill_the_field") + label + ".";
 
             FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,descricaoErro,descricaoErro);
             throw new ValidatorException(message);

@@ -2,6 +2,7 @@ package br.com.tairoroberto.sistemafinanceiro.converter;
 
 import br.com.tairoroberto.sistemafinanceiro.model.Pessoa;
 import br.com.tairoroberto.sistemafinanceiro.repository.Pessoas;
+import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
 import br.com.tairoroberto.sistemafinanceiro.util.Repositorios;
 
 import javax.faces.application.FacesMessage;
@@ -28,7 +29,7 @@ public class PessoaConverter implements Converter {
             pessoa = pessoas.porCodigo(new Integer(value));
 
             if (pessoa == null){
-                String descricaoErro = "Pessoa não existe!";
+                String descricaoErro = FacesUtil.getMessageI18n("person_does_not_exist");
                 FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_ERROR,descricaoErro,descricaoErro);
                 throw new ConverterException(message);
             }

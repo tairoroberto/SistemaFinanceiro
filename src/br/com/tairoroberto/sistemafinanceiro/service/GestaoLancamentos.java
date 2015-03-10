@@ -2,6 +2,7 @@ package br.com.tairoroberto.sistemafinanceiro.service;
 
 import br.com.tairoroberto.sistemafinanceiro.model.Lancamento;
 import br.com.tairoroberto.sistemafinanceiro.repository.Lancamentos;
+import br.com.tairoroberto.sistemafinanceiro.util.FacesUtil;
 
 /**
  * Created by tairo on 07/03/15.
@@ -17,7 +18,7 @@ public class GestaoLancamentos {
     //Cadastrar Lancamento
     public void salvar(Lancamento lancamento) throws RegraNegocioException {
         if (existeLacamentoSemelhante(lancamento)){
-            throw new RegraNegocioException("Já existe um lancamento igual a este");
+            throw new RegraNegocioException("existing_entry");
         }
         this.lancamentos.cadastrar(lancamento);
     }
@@ -32,7 +33,7 @@ public class GestaoLancamentos {
     //Excuir lancamento
     public void excluir(Lancamento lancamento) throws RegraNegocioException {
         if (lancamento.isPago()){
-            throw new RegraNegocioException("Lançamento pago não pode ser excluído");
+            throw new RegraNegocioException("entry_does_not_be_deleted");
         }
 
         this.lancamentos.deletar(lancamento);

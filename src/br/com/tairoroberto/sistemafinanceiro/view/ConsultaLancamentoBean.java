@@ -36,10 +36,10 @@ public class ConsultaLancamentoBean implements Serializable {
         try {
             gestaoLancamentos.excluir(this.lancamentoSelecionado);
             this.inicializar();
-            FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_INFO,"Lançamento excluido com sucesso!");
+            FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_INFO,FacesUtil.getMessageI18n("entry_deleted"));
 
         } catch (RegraNegocioException e) {
-            FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_INFO, e.getMessage());
+            FacesUtil.adicionarMensagem(FacesMessage.SEVERITY_INFO, FacesUtil.getMessageI18n(e.getMessage()));
         }
     }
 

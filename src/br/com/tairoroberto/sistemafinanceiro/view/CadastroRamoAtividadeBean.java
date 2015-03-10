@@ -37,6 +37,7 @@ public class CadastroRamoAtividadeBean {
 
     public void setRamoAtividade(RamoAtividade ramoAtividade) throws CloneNotSupportedException {
         this.ramoAtividade = ramoAtividade;
+
         if (this.ramoAtividade == null){
             this.ramoAtividade = new RamoAtividade();
         }else{
